@@ -153,7 +153,7 @@ func (opts *Options) Clone() *Options {
 //
 // Default: nil
 func (opts *Options) SetCompactionFilter(value CompactionFilter) {
-	C.rocksdb_compactionfilter_destroy(opts.ccf)
+//	C.rocksdb_compactionfilter_destroy(opts.ccf)
 
 	if nc, ok := value.(*nativeCompactionFilter); ok {
 		opts.ccf = nc.c
